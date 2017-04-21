@@ -36,8 +36,8 @@ Qed.
 
 The tatic works for simple cases as the one shown above but is very
 fragile and only supports generating induction schemes of
-unparametrized types. It also expects to find `Forall'`, a variant of
-`Forall` situated in `Type`, in a `Util` module.
+unparametrized types. It also expects that you use `Forall'` which is
+a variant of `Forall` situated in `Type` instead of `Prop`.
 
 ```coq
 Inductive Forall' {A : Type} (P : A -> Type) : list A -> Type :=

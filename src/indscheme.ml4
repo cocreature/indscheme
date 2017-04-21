@@ -19,10 +19,9 @@ let constant locstr dir s = Universes.constr_of_global (Coqlib.find_reference lo
 
 let bind_ = lazy (constant "foobar" ["Autosubst"; "Autosubst_Classes"] "_bind")
 let coq_list = lazy (constant "foobar" ["Coq"; "Init"; "Datatypes"] "list")
-(* for now the location of Forall' (a version of Forall based in Type) is hardcoded *)
-let forall' = lazy (constant "foobar" ["Util"] "Forall'")
-let forall_nil' = lazy (constant "foobar" ["Util"] "Forall_nil'")
-let forall_cons' = lazy (constant "foobar" ["Util"] "Forall_cons'")
+let forall' = lazy (constant "foobar" ["Indscheme"; "Indscheme"] "Forall'")
+let forall_nil' = lazy (constant "foobar" ["Indscheme"; "Indscheme"] "Forall_nil'")
+let forall_cons' = lazy (constant "foobar" ["Indscheme"; "Indscheme"] "Forall_cons'")
 
 let build_forall el_ty list_ty env prop ind_el =
   let forall' = Lazy.force forall' in
