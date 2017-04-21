@@ -35,8 +35,9 @@ Qed.
 ## Status
 
 The tatic works for simple cases as the one shown above but is very
-fragile and only supports generating induction schemes of
-unparametrized types. It also expects that you use `Forall'` which is
+fragile and thereby unlikely to be useful in its current state.
+It also only supports generating induction schemes of
+unparametrized types and it expects that you use `Forall'` which is
 a variant of `Forall` situated in `Type` instead of `Prop`.
 
 ```coq
