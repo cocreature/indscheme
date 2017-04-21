@@ -39,7 +39,7 @@ fragile and only supports generating induction schemes of
 unparametrized types. It also expects to find `Forall'`, a variant of
 `Forall` situated in `Type`, in a `Util` module.
 
-```
+```coq
 Inductive Forall' {A : Type} (P : A -> Type) : list A -> Type :=
 | Forall_nil' : Forall' P nil
 | Forall_cons' : forall {x : A} {l : list A}, P x -> Forall' P l -> Forall' P (x :: l).
